@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!--Font Awesome Icons library-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>FoodMap</title>
+</head>
+
+<body>
+    <header>
+        <!-- Header image -->
+        <div class="img-fluid">
+            <div class="card hovercard">
+                <div class="card-background">
+                    <img class="card-bkimg" alt="" src="http://www.photos-public-domain.com/wp-content/uploads/2012/05/ivory-off-white-paper-texture.jpg">
+                </div>
+                <div id="profile-user">
+                    <div class="useravatar">
+                        <a href="../views/perfil.html"></a>
+                        <img alt="" src="../css/Sources/139.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br/>
+
+    <!-- end header image -->
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-md-8 col-sm-12 text-center mt-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar" id="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-red" type="button" id="search-button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-6 col-sm-12 my-4">
+                <div id="map"></div>
+            </div> -->
+            <div class="container">
+                <div class="row" id="restaurants-cards">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CArds -->
+
+    <!-- SCRIPTS -->
+<!-- sweet alert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <!-- Functionality-->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/google-api.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- This loads the JS definitions ehen the page strarts loading in the browser -->
+    <!-- We´re loading the JS asynchronously wich means that the rest of the page will render while the js API loads and our callback function will ezecute when the api is done loading  -->
+    <!-- We are loading the page from maps.googleapis.com and the parameter v=3 indicates we´re calling
+        the version 3 of the api-->
+    <!-- the key is the one I generate from the page  -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG1Z3w5WZSs6K9mYAmFvaWo9p6gH0r43o&callback=currentPosition"></script> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+</body>
+
+</html>
